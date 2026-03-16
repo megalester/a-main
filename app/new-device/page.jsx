@@ -92,14 +92,14 @@ const Page = () => {
             <div className="flex gap-4 mb-6">
               <button
                 type="submit"
-                className="flex-1 border border-[#ffd814] text-[#ffd814] py-3 rounded-lg font-semibold hover:bg-[#f0f4f9] transition-colors text-center cursor-pointer"
+                className="flex-1 border border-[#ffd814] text-black py-3 rounded-lg font-semibold hover:bg-[#f0f4f9] transition-colors text-center cursor-pointer"
               >
                 {loading ? "Loading..." : "This wasn't me"}
               </button>
 
               <button
                 type="submit"
-                className="flex-1 bg-primary hover:!bg-[#f7cf0a] text-[#0d2d62] py-3 rounded-lg font-semibold transition-colors text-center cursor-pointer"
+                className="flex-1 bg-primary hover:!bg-[#f7cf0a] text-black py-3 rounded-lg font-semibold transition-colors text-center cursor-pointer"
               >
                 {loading ? "Loading..." : "Confirm"}
               </button>
