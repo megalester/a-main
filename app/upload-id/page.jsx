@@ -116,7 +116,7 @@ const UploadID = () => {
             </div>
 
             <button
-              className="cursor-pointer w-full py-3 mt-6 bg-primary  rounded-lg font-bold text-white transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+              className="cursor-pointer w-full py-3 mt-6 bg-[#ffd814]   rounded-lg font-bold text-black transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               type="submit"
               disabled={loading}
             >
