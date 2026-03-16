@@ -183,7 +183,7 @@ const UploadID = () => {
               <button
                 type="button"
                 onClick={handleCloseModal}
-                className="rounded-[14px] border-[3px] border-[#d3d8df] bg-primary px-11 py-2 text-lg font-semibold text-white shadow-inner transition-colors"
+                className="rounded-full bg-primary px-11 py-2 text-lg font-semibold text-black  shadow-inner transition-colors"
               >
                 Close
               </button>
