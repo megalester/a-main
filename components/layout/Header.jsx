@@ -26,16 +26,16 @@ export default function Header() {
 
   return (
     <header className="w-full bg-[#131921] text-white border-b border-white/10">
-      <div className="mx-auto flex h-[70px] w-full items-center gap-3 px-4 lg:px-4">
+      <div className="mx-auto flex w-full flex-wrap items-center gap-2 px-3 py-2 sm:px-4 md:h-[70px] md:flex-nowrap md:gap-3 md:py-0">
         {/* Brand */}
-        <div className="flex min-w-fit items-center gap-3 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40">
+        <div className="order-1 flex min-w-fit items-center gap-3 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40">
           <div className="flex flex-col leading-none">
             <img
               src="/images/Amazon-Logo-White-Transparent.png"
               alt="Amazon"
               width={100}
               height={100}
-              className="object-contain"
+              className="h-auto w-[84px] object-contain sm:w-[100px]"
             />
           </div>
         </div>
@@ -50,23 +50,23 @@ export default function Header() {
         </div>
 
         {/* Search */}
-        <div className="flex-1">
-          <div className="flex h-[40px] overflow-hidden rounded-lg bg-white focus-within:border-orange-400">
+        <div className="order-3 w-full md:order-none md:w-auto md:flex-1">
+          <div className="flex h-[38px] overflow-hidden rounded-lg bg-white md:h-[40px]">
             {/* Left selector UI only */}
-            <div className="flex min-w-[82px] items-center justify-center gap-2 bg-[#e6e6e6] px-4 text-[#0f1111] border-r border-black/10">
-              <span className="text-sm font-medium">All</span>
+            <div className="flex min-w-[62px] items-center justify-center gap-1 border-r border-black/10 bg-[#e6e6e6] px-2 text-[#0f1111] sm:min-w-[82px] sm:gap-2 sm:px-4">
+              <span className="text-xs font-medium sm:text-sm">All</span>
               <FiChevronDown className="text-sm opacity-70" />
             </div>
 
             <input
               type="text"
               placeholder="Search Amazon"
-              className="h-full flex-1 border-0 px-4 text-base text-[#0f1111] outline-none placeholder:text-black/55"
+              className="h-full min-w-0 flex-1 border-0 px-3 text-sm text-[#0f1111] outline-none placeholder:text-black/55 sm:px-4 sm:text-base"
             />
 
             <button
               type="button"
-              className="flex w-[72px] items-center justify-center bg-[#f3a847] text-[#111] transition hover:bg-[#f0b35e]"
+              className="flex w-[54px] items-center justify-center bg-[#f3a847] text-[#111] transition hover:bg-[#f0b35e] sm:w-[72px]"
             >
               <FiSearch className="text-[20px]" />
             </button>
@@ -93,14 +93,17 @@ export default function Header() {
           <p className="text-[15px] font-bold">& Orders</p>
         </div>
 
-        <div className="flex min-w-fit items-end rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 gap-1">
+        <div className="order-2 ml-auto flex min-w-fit items-end gap-1 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 md:order-none md:ml-0">
           <div className="relative">
             {/* <span className="absolute -top-3 right-0 text-[20px] font-bold text-orange-400">
               0
             </span> */}
             <FiShoppingCart className="text-[30px] text-white" />
           </div>
-          <span className="mb-1 text-[15px] font-bold"> Cart</span>
+          <span className="mb-1 hidden text-[15px] font-bold sm:inline">
+            {" "}
+            Cart
+          </span>
         </div>
       </div>
     </header>

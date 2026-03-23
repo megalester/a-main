@@ -3,7 +3,7 @@ import React from "react";
 
 const InfoCard = ({ subTitle, title, image, details }) => {
   return (
-    <div className="rounded-lg p-4 col-flex justify-between w-[400px] h-[500px] border border-gray-300">
+    <div className="col-flex h-auto w-full max-w-[400px] justify-between rounded-lg border border-gray-300 p-4 md:h-[500px]">
       <div>
         <p className="text-sm font-light pb-2">{subTitle}</p>
         <img
@@ -11,7 +11,7 @@ const InfoCard = ({ subTitle, title, image, details }) => {
           alt="Info"
           width={370}
           height={210}
-          className="object-contain rounded-md"
+          className="h-auto w-full object-contain rounded-md"
         />
         <h1 className="text-[24px] font-extrabold text-sec pt-2 pb-3">
           {title}
@@ -19,7 +19,7 @@ const InfoCard = ({ subTitle, title, image, details }) => {
         <p>{details}</p>
       </div>
 
-      <div className="w-[190px] mt-6">
+      <div className="mt-6 w-full sm:w-[190px]">
         <button className="cursor-pointer w-full py-[10px] bg-primary rounded-lg font-bold text-white hover:!bg-[#054e7b]">
           Learn More
         </button>

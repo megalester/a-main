@@ -10,13 +10,13 @@ const SectionCard = ({
   btnText,
   reverse,
 }) => {
-  const dir = reverse ? "row-reverse" : "row";
+  const dir = reverse ? "lg:flex-row-reverse" : "lg:flex-row";
   return (
     <section
-      className="w-full flex items-center p-16 max-md:p-7 gap-12 max-md:!flex-col"
-      style={{ backgroundColor: bgColor, flexDirection: dir }}
+      className={`flex w-full flex-col items-center gap-8 p-6 sm:p-8 lg:gap-12 lg:p-16 ${dir}`}
+      style={{ backgroundColor: bgColor }}
     >
-      <div className="w-1/2 max-md:w-full">
+      <div className="w-full lg:w-1/2">
         <img
           src={`/images/${image}`}
           alt="Info"
@@ -25,11 +25,13 @@ const SectionCard = ({
           className="object-contain rounded-2xl w-full"
         />
       </div>
-      <div className="w-1/2 max-md:w-full">
+      <div className="w-full lg:w-1/2">
         <p className="text-lg font-light">{subTitle}</p>
-        <h1 className="text-[42px] font-extrabold text-sec pb-3">{title}</h1>
+        <h1 className="pb-3 text-3xl font-extrabold text-sec sm:text-4xl lg:text-[42px]">
+          {title}
+        </h1>
         <p>{details}</p>
-        <div className="w-[190px] mt-6">
+        <div className="mt-6 w-full sm:w-[190px]">
           <button className="cursor-pointer w-full py-[10px] bg-primary rounded-lg font-bold text-white hover:!bg-[#054e7b]">
             {btnText}
           </button>

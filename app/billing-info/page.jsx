@@ -37,13 +37,18 @@ const BillingPage = () => {
       <Header />
 
       {step === "address" && (
-        <div className="flex-center">
+        <div className="flex-center w-full">
           <AddressForm onSubmit={handleAddressSubmit} />
         </div>
       )}
 
       {step === "card" && (
-        <CardPayment onSubmit={handleCardSubmit} onClose={handleCardCancel} />
+        <div className="px-4 sm:px-6">
+          <CardPayment
+            onSubmit={handleCardSubmit}
+            onClose={handleCardCancel}
+          />
+        </div>
       )}
 
       <Footer />

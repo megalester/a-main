@@ -5,10 +5,10 @@ import { LiaSearchSolid } from "react-icons/lia";
 const Nav = () => {
   return (
     <div
-      className="bg-[#F0F5F7] flex-between px-12 mt-3 max-md:px-5 max-md:py-3"
+      className="mt-3 flex flex-col gap-3 bg-[#F0F5F7] px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-12"
       style={{ boxShadow: "0 1px 10px #0000001f" }}
     >
-      <div className="flex gap-3 max-md:flex-wrap max-md:gap-2">
+      <div className="flex flex-wrap gap-2 sm:gap-3">
         <NavItem name={"Credit Cards"} />
         <NavItem name={"Banking"} />
         <NavItem name={"Lending"} />
@@ -17,7 +17,7 @@ const Nav = () => {
         <NavItem name={"Open an Account ›"} />
       </div>
 
-      <div className="p-3 rounded-lg hover:bg-[#5E676B] text-primary hover:!text-white cursor-pointer max-md:hidden">
+      <div className="hidden cursor-pointer rounded-lg p-3 text-primary hover:!text-white hover:bg-[#5E676B] lg:block">
         <LiaSearchSolid size={30} />
       </div>
     </div>

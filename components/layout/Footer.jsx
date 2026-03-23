@@ -111,8 +111,8 @@ export default function EcommerceFooter() {
       </button>
 
       {/* Main links */}
-      <div className="mx-auto max-w-[1500px] px-6 py-14 lg:px-12">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-4 ">
+      <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-14 lg:px-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
           {footerColumns.map((column) => (
             <div key={column.title}>
               <h3 className="mb-5 text-base font-bold leading-none tracking-tight ">
@@ -140,7 +140,7 @@ export default function EcommerceFooter() {
       <div className="border-t border-white/10" />
 
       {/* Bottom area */}
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-8 px-6 py-12 lg:flex-row lg:gap-10">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:gap-10">
         {/* Brand placeholder */}
         <div className="flex min-w-[180px] items-center justify-center">
           <div className="flex flex-col items-center leading-none">
@@ -155,10 +155,10 @@ export default function EcommerceFooter() {
         </div>
 
         {/* Controls */}
-        <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+        <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
           <button
             type="button"
-            className="flex p-1 items-center gap-3 rounded-md border border-white/30 px-5 text-sm text-white/90 transition hover:bg-white/5"
+            className="flex w-full items-center gap-3 rounded-md border border-white/30 p-1 px-5 text-sm text-white/90 transition hover:bg-white/5 sm:w-auto"
           >
             <FiGlobe className="text-[16px]" />
             <span>English</span>
@@ -170,7 +170,7 @@ export default function EcommerceFooter() {
 
           <button
             type="button"
-            className="flex p-1 items-center gap-3 rounded-md border border-white/30 px-5 text-sm text-white/90 transition hover:bg-white/5"
+            className="flex w-full items-center gap-3 rounded-md border border-white/30 p-1 px-5 text-sm text-white/90 transition hover:bg-white/5 sm:w-auto"
           >
             <FiDollarSign className="text-[16px]" />
             <span>USD - U.S. Dollar</span>
@@ -178,7 +178,7 @@ export default function EcommerceFooter() {
 
           <button
             type="button"
-            className="flex p-1 items-center gap-3 rounded-md border border-white/30 px-5 text-sm text-white/90 transition hover:bg-white/5"
+            className="flex w-full items-center gap-3 rounded-md border border-white/30 p-1 px-5 text-sm text-white/90 transition hover:bg-white/5 sm:w-auto"
           >
             <FiMapPin className="text-[16px]" />
             <span>United States</span>
@@ -187,8 +187,8 @@ export default function EcommerceFooter() {
       </div>
 
       <div className="bg-[#131a22] text-gray-300 text-sm">
-        <div className="max-w-[1000px] mx-auto px-6 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-x-10 gap-y-6">
+        <div className="mx-auto max-w-[1000px] px-4 py-8 sm:px-6 sm:py-10">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7">
             {footerProducts.map((item, i) => (
               <div key={i} className="space-y-1 cursor-pointer hover:underline">
                 <p className="text-white text-sm font-normal">{item.title}</p>

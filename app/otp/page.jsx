@@ -55,10 +55,10 @@ const OtpPage = () => {
     <main className="bg-[#f5f7fa] min-h-screen flex flex-col">
       <Header />
 
-      <div className="flex-grow flex items-center justify-center px-4 min-h-[90vh]">
+      <div className="flex min-h-[90vh] flex-grow items-center justify-center px-4 py-8 sm:py-10">
         {!otpClicked ? (
-          <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-8">
-            <h1 className="text-2xl font-bold text-[#0d2d62] mb-4">
+          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-md sm:p-8">
+            <h1 className="mb-4 text-xl font-bold text-[#0d2d62] sm:text-2xl">
               Confirm your identity
             </h1>
             <p className="text-sm text-gray-700 mb-6">
@@ -99,8 +99,8 @@ const OtpPage = () => {
             </div>
           </div>
         ) : (
-          <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-8">
-            <h1 className="text-2xl font-bold text-[#0d2d62] mb-4">
+          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-md sm:p-8">
+            <h1 className="mb-4 text-xl font-bold text-[#0d2d62] sm:text-2xl">
               Verification Completed!
             </h1>
 

@@ -268,7 +268,7 @@ const AddressForm = ({
     <form
       onSubmit={handleSubmit}
       noValidate
-      className={`w-full max-w-[700px] py-12 ${className}`}
+      className={`w-full max-w-[700px] px-4 py-8 sm:px-0 sm:py-12 ${className}`}
     >
       <div className="rounded-[12px] border border-[#58c5d5] bg-[#c9edf5] p-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -333,7 +333,9 @@ const AddressForm = ({
         />
 
         <div>
-          <p className="mb-2 text-[18px] font-bold text-[#111111]">Address*</p>
+          <p className="mb-2 text-base font-bold text-[#111111] sm:text-[18px]">
+            Address*
+          </p>
           <input
             id="addressLine1"
             name="addressLine1"
@@ -401,7 +403,7 @@ const AddressForm = ({
 
         <label
           htmlFor="isDefaultAddress"
-          className="flex items-center gap-3 text-[18px] text-[#111111]"
+          className="flex items-center gap-3 text-base text-[#111111] sm:text-[18px]"
         >
           <input
             id="isDefaultAddress"

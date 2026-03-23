@@ -52,7 +52,7 @@ const LoginBox = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#fff] pt-8 pb-10 text-[#0f1111]">
+    <main className="min-h-screen bg-[#fff] px-4 pb-10 pt-6 text-[#0f1111] sm:px-0 sm:pt-8">
       <div className="mx-auto w-full">
         <img
           src={"/images/amazon-logo.png"}
@@ -64,7 +64,7 @@ const LoginBox = () => {
 
         <form
           onSubmit={step === "email" ? handleContinue : handleSubmit}
-          className="max-w-[350px] m-auto rounded-lg border border-[#d5d9d9] bg-white px-[20px] py-[22px] mt-5"
+          className="m-auto mt-5 w-full max-w-[350px] rounded-lg border border-[#d5d9d9] bg-white px-[20px] py-[22px]"
         >
           <h1 className="text-[20px] font-semibold leading-none font-normal">
             Sign in or create account
@@ -193,8 +193,8 @@ const LoginBox = () => {
           ) : null}
         </form>
 
-        <div className="mt-[100px] border-t-2 border-[#d5d9d9] pt-8 text-center">
-          <div className="flex items-center justify-center gap-8 text-[13px] leading-none text-[#2162a1]">
+        <div className="mt-14 border-t-2 border-[#d5d9d9] pt-8 text-center sm:mt-[100px]">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-[13px] leading-none text-[#2162a1] sm:gap-8">
             <button type="button" className="hover:underline">
               Conditions of Use
             </button>

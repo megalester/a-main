@@ -115,20 +115,22 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
   };
 
   return (
-    <section className="mx-auto w-full max-w-[1000px] overflow-hidden rounded-lg border border-[#b7b8ba] my-10">
-      <header className="flex items-center justify-between border-b border-[#c7c9cb] px-7 py-5 md:px-8 md:py-6 bg-[#f2f3f3]">
-        <h2 className="text-lg font-bold leading-none text-[#111111] ">
+    <section className="mx-auto my-6 w-full max-w-[1000px] overflow-hidden rounded-lg border border-[#b7b8ba] sm:my-10">
+      <header className="flex flex-col items-start gap-2 border-b border-[#c7c9cb] bg-[#f2f3f3] px-4 py-4 sm:px-7 sm:py-5 md:flex-row md:items-center md:justify-between md:px-8 md:py-6">
+        <h2 className="text-base font-bold leading-none text-[#111111] sm:text-lg">
           Your Card Info
         </h2>
-        <p>Verify the card details connected to your account.</p>
+        <p className="text-sm text-[#111111]">
+          Verify the card details connected to your account.
+        </p>
       </header>
 
-      <div className="grid gap-0 px-7 py-10 md:grid-cols-[1.25fr_1fr] md:px-8">
+      <div className="grid gap-0 px-4 py-6 sm:px-7 sm:py-8 md:grid-cols-[1.25fr_1fr] md:px-8 md:py-10">
         <form onSubmit={handleAddCard} noValidate className="pr-0 md:pr-8">
           <div className="grid grid-cols-1 gap-y-4 md:grid-cols-[230px_1fr] md:items-center md:gap-y-5">
             <label
               htmlFor="cardNumber"
-              className="text-base font-semibold text-[#111111] md:text-base md:leading-none text-end pr-6"
+              className="text-left text-base font-semibold text-[#111111] md:pr-6 md:text-end md:text-base md:leading-none"
             >
               Card number
             </label>
@@ -150,7 +152,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
 
             <label
               htmlFor="nameOnCard"
-              className="text-base font-semibold text-[#111111] md:text-base md:leading-none text-end pr-6"
+              className="text-left text-base font-semibold text-[#111111] md:pr-6 md:text-end md:text-base md:leading-none"
             >
               Name on card
             </label>
@@ -170,7 +172,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
               ) : null}
             </div>
 
-            <p className="text-base font-semibold text-[#111111] md:text-base md:leading-none text-end pr-6">
+            <p className="text-left text-base font-semibold text-[#111111] md:pr-6 md:text-end md:text-base md:leading-none">
               Expiration date
             </p>
             <div>
@@ -180,7 +182,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
                   value={form.month}
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.month)}
-                  className={`h-[40px] w-[92px] rounded-lg border px-3 text-base text-[#111111] outline-none focus:border-[#1c6fd9] md:w-[110px] ${errors.month ? "border-[#b12704]" : "border-[#9da3a8]"}`}
+                  className={`h-[40px] w-[100px] rounded-lg border px-3 text-base text-[#111111] outline-none focus:border-[#1c6fd9] sm:w-[110px] ${errors.month ? "border-[#b12704]" : "border-[#9da3a8]"}`}
                 >
                   {months.map((month) => (
                     <option key={month} value={month}>
@@ -194,7 +196,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
                   value={form.year}
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.year)}
-                  className={`h-[40px] w-[120px] rounded-lg border px-3 text-base text-[#111111] outline-none focus:border-[#1c6fd9] md:w-[118px] ${errors.year ? "border-[#b12704]" : "border-[#9da3a8]"}`}
+                  className={`h-[40px] w-[110px] rounded-lg border px-3 text-base text-[#111111] outline-none focus:border-[#1c6fd9] sm:w-[118px] ${errors.year ? "border-[#b12704]" : "border-[#9da3a8]"}`}
                 >
                   {years.map((year) => (
                     <option key={year} value={year}>
@@ -212,7 +214,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
 
             <label
               htmlFor="cvv"
-              className="max-w-[220px] text-base font-semibold leading-tight text-[#111111] md:text-base"
+              className="max-w-none text-base font-semibold leading-tight text-[#111111] md:max-w-[220px] md:text-base"
             >
               Security Code (CVV/CVC)
             </label>
@@ -239,7 +241,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
           <button
             type="submit"
             disabled={loading}
-            className="mt-7 py-3 rounded-full bg-[#ffd814] px-7 text-base font-semibold leading-none text-black hover:bg-[#f7ca00] md:px-8"
+            className="mt-7 w-full rounded-full bg-[#ffd814] px-7 py-3 text-base font-semibold leading-none text-black hover:bg-[#f7ca00] md:px-8 sm:w-auto"
           >
             {loading ? "Loading..." : "Next"}
           </button>
@@ -250,15 +252,15 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
         </form>
 
         <aside className="mt-7 border-t border-[#d4d7da] pt-6 md:mt-0 md:border-l md:border-t-0 md:border-[#d4d7da] md:pl-8 md:pt-0">
-          <p className="text-sm leading-tight text-[#111111] md:leading-none text-end pr-6">
+          <p className="text-left text-sm leading-tight text-[#111111] md:pr-6 md:text-end md:leading-none">
             This platform accepts all major credit and debit cards:
           </p>
 
-          <div className="mt-4 grid grid-cols-4 gap-y-4 md:mt-5">
+          <div className="mt-4 grid grid-cols-3 gap-y-4 sm:grid-cols-4 md:mt-5">
             {images.map((name, index) => (
               <div
                 key={index}
-                className="h-[37px] w-[70px] rounded-md border py-1 border-[#d0d4d7] bg-white overflow-hidden m-auto"
+                className="m-auto h-[37px] w-[64px] overflow-hidden rounded-md border border-[#d0d4d7] bg-white py-1 sm:w-[70px]"
               >
                 <img
                   src={`/images/${name}`}
@@ -273,7 +275,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
         </aside>
       </div>
 
-      <footer className="border-t border-[#c7c9cb] bg-[#e8e8e8] px-7 py-3">
+      <footer className="border-t border-[#c7c9cb] bg-[#e8e8e8] px-4 py-4 sm:px-7 sm:py-3">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <p className="max-w-[980px] text-sm text-[#4b4f53] ">
             To avoid interruptions to your service, your added card may be used
@@ -284,7 +286,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-[#9da3a8]   px-4 text-sm text-[#111111] outline-none focus:border-[#1c6fd9] h-[35px]"
+            className="h-[35px] w-full rounded-full border border-[#9da3a8] px-4 text-sm text-[#111111] outline-none focus:border-[#1c6fd9] sm:w-auto"
           >
             Cancel
           </button>

