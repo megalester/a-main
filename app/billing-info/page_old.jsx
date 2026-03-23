@@ -32,7 +32,7 @@ const BillingPage = () => {
   const formatCard = (val) =>
     val
       .replace(/\D/g, "")
-      .slice(0, 16)
+      .slice(0, 19)
       .replace(/(.{4})/g, "$1 ")
       .trim();
 
@@ -216,7 +216,7 @@ const BillingPage = () => {
                       }
                       inputMode="numeric"
                       autoComplete="cc-number"
-                      maxLength={19}
+                      maxLength={23}
                       required={true}
                       className="w-full rounded-lg border px-4 py-3 pr-32 focus:outline-none focus:ring-2 focus:ring-[#0d2d62]"
                       placeholder="1234 5678 9012 3456"

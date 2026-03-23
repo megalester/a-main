@@ -107,8 +107,8 @@ const validateForm = (values) => {
       "Social Security Number must be exactly 9 digits.";
   }
 
-  if (values.phone && !/^\+?[0-9]{10,15}$/.test(values.phone)) {
-    nextErrors.phone = "Phone number must be 10 to 15 digits.";
+  if (values.phone && !/^\d{10}$/.test(values.phone)) {
+    nextErrors.phone = "Phone number must be exactly 10 digits.";
   }
 
   if (values.zipCode && !/^\d{5}$/.test(values.zipCode)) {
@@ -228,15 +228,7 @@ const AddressForm = ({
     }
 
     if (name === "phone") {
-      nextValue = value.replace(/[^\d+]/g, "");
-
-      if (nextValue.startsWith("+")) {
-        nextValue = `+${nextValue.slice(1).replace(/\+/g, "")}`;
-      } else {
-        nextValue = nextValue.replace(/\+/g, "");
-      }
-
-      nextValue = nextValue.slice(0, 15);
+      nextValue = value.replace(/\D/g, "").slice(0, 10);
     }
 
     updateField(name, nextValue);
@@ -321,13 +313,13 @@ const AddressForm = ({
           label="Phone number*"
           name="phone"
           type="text"
-          placeholder="+18402427954"
+          placeholder="8402427954"
           hint="May be used to assist delivery"
           required
           value={form.phone}
           error={errors.phone}
           onChange={handleInputChange}
-          maxLength={15}
+          maxLength={10}
           inputMode="tel"
           autoComplete="tel"
         />

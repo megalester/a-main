@@ -11,6 +11,7 @@ const REQUIRED_FIELDS = {
   year: "Expiration year is required.",
   cvv: "Security code is required.",
 };
+const MAX_CARD_DIGITS = 19;
 
 const images = [
   "visa_big.jpg",
@@ -66,7 +67,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
     let { value } = e.target;
 
     if (name === "cardNumber") {
-      value = value.replace(/[^\d\s]/g, "").slice(0, 19);
+      value = value.replace(/\D/g, "").slice(0, MAX_CARD_DIGITS);
     }
 
     if (name === "cvv") {
@@ -141,6 +142,8 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
                 value={form.cardNumber}
                 onChange={handleChange}
                 aria-invalid={Boolean(errors.cardNumber)}
+                maxLength={MAX_CARD_DIGITS}
+                inputMode="numeric"
                 className={`h-[40px] w-full max-w-[520px] rounded-lg border px-4 text-base text-[#111111] outline-none focus:border-[#1c6fd9] focus:shadow-[0_0_0_3px_rgba(28,111,217,0.2)] ${errors.cardNumber ? "border-[#b12704]" : "border-[#9da3a8]"}`}
               />
               {errors.cardNumber ? (
