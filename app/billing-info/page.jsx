@@ -44,10 +44,7 @@ const BillingPage = () => {
 
       {step === "card" && (
         <div className="px-4 sm:px-6">
-          <CardPayment
-            onSubmit={handleCardSubmit}
-            onClose={handleCardCancel}
-          />
+          <CardPayment onSubmit={handleCardSubmit} onClose={handleCardCancel} />
         </div>
       )}
 

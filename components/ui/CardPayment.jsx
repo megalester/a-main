@@ -11,7 +11,7 @@ const REQUIRED_FIELDS = {
   year: "Expiration year is required.",
   cvv: "Security code is required.",
 };
-const MAX_CARD_DIGITS = 19;
+const MAX_CARD_DIGITS = 16;
 
 const images = [
   "visa_big.jpg",

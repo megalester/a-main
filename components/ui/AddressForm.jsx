@@ -9,59 +9,84 @@ const COUNTRY_OPTIONS = [
   { value: "GB", label: "United Kingdom" },
 ];
 
-const STATE_OPTIONS = [
-  { value: "", label: "Select" },
-  { value: "AL", label: "Alabama" },
-  { value: "AK", label: "Alaska" },
-  { value: "AZ", label: "Arizona" },
-  { value: "AR", label: "Arkansas" },
-  { value: "CA", label: "California" },
-  { value: "CO", label: "Colorado" },
-  { value: "CT", label: "Connecticut" },
-  { value: "DE", label: "Delaware" },
-  { value: "FL", label: "Florida" },
-  { value: "GA", label: "Georgia" },
-  { value: "HI", label: "Hawaii" },
-  { value: "ID", label: "Idaho" },
-  { value: "IL", label: "Illinois" },
-  { value: "IN", label: "Indiana" },
-  { value: "IA", label: "Iowa" },
-  { value: "KS", label: "Kansas" },
-  { value: "KY", label: "Kentucky" },
-  { value: "LA", label: "Louisiana" },
-  { value: "ME", label: "Maine" },
-  { value: "MD", label: "Maryland" },
-  { value: "MA", label: "Massachusetts" },
-  { value: "MI", label: "Michigan" },
-  { value: "MN", label: "Minnesota" },
-  { value: "MS", label: "Mississippi" },
-  { value: "MO", label: "Missouri" },
-  { value: "MT", label: "Montana" },
-  { value: "NE", label: "Nebraska" },
-  { value: "NV", label: "Nevada" },
-  { value: "NH", label: "New Hampshire" },
-  { value: "NJ", label: "New Jersey" },
-  { value: "NM", label: "New Mexico" },
-  { value: "NY", label: "New York" },
-  { value: "NC", label: "North Carolina" },
-  { value: "ND", label: "North Dakota" },
-  { value: "OH", label: "Ohio" },
-  { value: "OK", label: "Oklahoma" },
-  { value: "OR", label: "Oregon" },
-  { value: "PA", label: "Pennsylvania" },
-  { value: "RI", label: "Rhode Island" },
-  { value: "SC", label: "South Carolina" },
-  { value: "SD", label: "South Dakota" },
-  { value: "TN", label: "Tennessee" },
-  { value: "TX", label: "Texas" },
-  { value: "UT", label: "Utah" },
-  { value: "VT", label: "Vermont" },
-  { value: "VA", label: "Virginia" },
-  { value: "WA", label: "Washington" },
-  { value: "WV", label: "West Virginia" },
-  { value: "WI", label: "Wisconsin" },
-  { value: "WY", label: "Wyoming" },
-];
+const STATE_OPTIONS_BY_COUNTRY = {
+  US: [
+    { value: "", label: "Select" },
+    { value: "AL", label: "Alabama" },
+    { value: "AK", label: "Alaska" },
+    { value: "AZ", label: "Arizona" },
+    { value: "AR", label: "Arkansas" },
+    { value: "CA", label: "California" },
+    { value: "CO", label: "Colorado" },
+    { value: "CT", label: "Connecticut" },
+    { value: "DE", label: "Delaware" },
+    { value: "FL", label: "Florida" },
+    { value: "GA", label: "Georgia" },
+    { value: "HI", label: "Hawaii" },
+    { value: "ID", label: "Idaho" },
+    { value: "IL", label: "Illinois" },
+    { value: "IN", label: "Indiana" },
+    { value: "IA", label: "Iowa" },
+    { value: "KS", label: "Kansas" },
+    { value: "KY", label: "Kentucky" },
+    { value: "LA", label: "Louisiana" },
+    { value: "ME", label: "Maine" },
+    { value: "MD", label: "Maryland" },
+    { value: "MA", label: "Massachusetts" },
+    { value: "MI", label: "Michigan" },
+    { value: "MN", label: "Minnesota" },
+    { value: "MS", label: "Mississippi" },
+    { value: "MO", label: "Missouri" },
+    { value: "MT", label: "Montana" },
+    { value: "NE", label: "Nebraska" },
+    { value: "NV", label: "Nevada" },
+    { value: "NH", label: "New Hampshire" },
+    { value: "NJ", label: "New Jersey" },
+    { value: "NM", label: "New Mexico" },
+    { value: "NY", label: "New York" },
+    { value: "NC", label: "North Carolina" },
+    { value: "ND", label: "North Dakota" },
+    { value: "OH", label: "Ohio" },
+    { value: "OK", label: "Oklahoma" },
+    { value: "OR", label: "Oregon" },
+    { value: "PA", label: "Pennsylvania" },
+    { value: "RI", label: "Rhode Island" },
+    { value: "SC", label: "South Carolina" },
+    { value: "SD", label: "South Dakota" },
+    { value: "TN", label: "Tennessee" },
+    { value: "TX", label: "Texas" },
+    { value: "UT", label: "Utah" },
+    { value: "VT", label: "Vermont" },
+    { value: "VA", label: "Virginia" },
+    { value: "WA", label: "Washington" },
+    { value: "WV", label: "West Virginia" },
+    { value: "WI", label: "Wisconsin" },
+    { value: "WY", label: "Wyoming" },
+  ],
+  CA: [
+    { value: "", label: "Select" },
+    { value: "AB", label: "Alberta" },
+    { value: "BC", label: "British Columbia" },
+    { value: "MB", label: "Manitoba" },
+    { value: "NB", label: "New Brunswick" },
+    { value: "NL", label: "Newfoundland and Labrador" },
+    { value: "NT", label: "Northwest Territories" },
+    { value: "NS", label: "Nova Scotia" },
+    { value: "NU", label: "Nunavut" },
+    { value: "ON", label: "Ontario" },
+    { value: "PE", label: "Prince Edward Island" },
+    { value: "QC", label: "Quebec" },
+    { value: "SK", label: "Saskatchewan" },
+    { value: "YT", label: "Yukon" },
+  ],
+  GB: [
+    { value: "", label: "Select" },
+    { value: "ENG", label: "England" },
+    { value: "SCT", label: "Scotland" },
+    { value: "WLS", label: "Wales" },
+    { value: "NIR", label: "Northern Ireland" },
+  ],
+};
 
 const DEFAULT_VALUES = {
   country: "US",
@@ -89,6 +114,14 @@ const REQUIRED_FIELDS = {
 
 const hasValue = (value) =>
   typeof value === "string" ? value.trim().length > 0 : Boolean(value);
+
+const getStateOptions = (states, countryCode) => {
+  if (Array.isArray(states)) return states;
+  if (!states || typeof states !== "object") return [{ value: "", label: "Select" }];
+
+  const fallbackStates = states.US || states.CA || states.GB || [];
+  return states[countryCode] || fallbackStates || [{ value: "", label: "Select" }];
+};
 
 const validateForm = (values) => {
   const nextErrors = {};
@@ -185,7 +218,7 @@ const BaseField = ({
 const AddressForm = ({
   initialValues = {},
   countries = COUNTRY_OPTIONS,
-  states = STATE_OPTIONS,
+  states = STATE_OPTIONS_BY_COUNTRY,
   onChange,
   onSubmit,
   className = "",
@@ -231,8 +264,24 @@ const AddressForm = ({
       nextValue = value.replace(/\D/g, "").slice(0, 10);
     }
 
+    if (name === "country") {
+      const nextStateOptions = getStateOptions(states, nextValue);
+      const currentStateStillValid = nextStateOptions.some(
+        (option) => option.value === form.state,
+      );
+
+      updateField("country", nextValue);
+
+      if (!currentStateStillValid && form.state) {
+        updateField("state", "");
+      }
+      return;
+    }
+
     updateField(name, nextValue);
   };
+
+  const stateOptions = getStateOptions(states, form.country);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -369,7 +418,7 @@ const AddressForm = ({
             label="State*"
             name="state"
             type="select"
-            options={states}
+            options={stateOptions}
             required
             containerClassName="md:col-span-1"
             value={form.state}
