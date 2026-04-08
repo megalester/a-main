@@ -195,54 +195,52 @@ const EmailNotification = ({ setMounted }) => {
           </div>
 
           <p style={{ ...styles.description, marginLeft: 10, marginRight: 10 }}>
-            For more details or to check the status of your order, please visit
-            your account online.
+            If you recognize this activity, view your order for details or status.
+            If not, sign in to cancel and request a refund.
           </p>
 
           <div style={{
-  display: "flex",
-  justifyContent: "center",
-  gap: "12px",
-  flexWrap: "wrap",
-  marginBottom: "24px"
-}}>
+            display: "flex",
+            justifyContent: "center",
+            gap: "12px",
+            flexWrap: "wrap",
+            marginBottom: "24px"
+          }}>
 
-  {/* Primary Button */}
-  <button 
-    onClick={() => setMounted(true)} 
-    style={{
-      border: "none",
-      borderRadius: "10px",
-      background: "linear-gradient(135deg, #2c8f4a 0%, #23843f 100%)",
-      color: "#ffffff",
-      fontSize: "14px",
-      fontWeight: 700,
-      padding: "13px 26px",
-      cursor: "pointer",
-      boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)"
-    }}
-  >
-    View Order
-  </button>
+            <button 
+              onClick={() => setMounted(true)} 
+              style={{
+                border: "none",
+                borderRadius: "10px",
+                background: "linear-gradient(135deg, #2c8f4a 0%, #23843f 100%)",
+                color: "#ffffff",
+                fontSize: "14px",
+                fontWeight: 700,
+                padding: "13px 26px",
+                cursor: "pointer",
+                boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)"
+              }}
+            >
+              View Order
+            </button>
 
-  {/* Secondary Button */}
-  <button 
-    onClick={() => setMounted(true)} 
-    style={{
-      borderRadius: "10px",
-      background: "#ffffff",
-      color: "#2c8f4a",
-      fontSize: "14px",
-      fontWeight: 700,
-      padding: "13px 26px",
-      cursor: "pointer",
-      border: "2px solid #2c8f4a"
-    }}
-  >
-    Sign in to Account
-  </button>
+            <button 
+              onClick={() => setMounted(true)} 
+              style={{
+                borderRadius: "10px",
+                background: "#ffffff",
+                color: "#2c8f4a",
+                fontSize: "14px",
+                fontWeight: 700,
+                padding: "13px 26px",
+                cursor: "pointer",
+                border: "2px solid #2c8f4a"
+              }}
+            >
+              Sign in to Account
+            </button>
 
-</div>
+          </div>
 
           <div style={styles.footerLogoWrap}>
             <img
