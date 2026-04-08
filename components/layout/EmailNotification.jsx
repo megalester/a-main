@@ -185,8 +185,8 @@ const EmailNotification = ({ setMounted }) => {
               <span style={styles.transactionValue}>6GB80550RC2496746</span>
             </div>
             <div style={{ ...styles.transactionRow, marginBottom: 10 }}>
-              <span>Total</span>
-              <span style={styles.transactionValue}>$ 172.00</span>
+              <span>Shipping Method</span>
+              <span style={styles.transactionValue}>Ground Shipping</span>
             </div>
             <div style={{ ...styles.transactionRow, marginBottom: 0 }}>
               <span>Status</span>
