@@ -180,8 +180,8 @@ const EmailNotification = ({ setMounted }) => {
         <div style={styles.body}>
           <div style={styles.transactionCard}>
             <div style={styles.transactionRow}>
-              <span>Transaction ID</span>
-              <span style={styles.transactionValue}>6GB80550RC2496746</span>
+              <span>Order Confirmation</span>
+              <span style={styles.transactionValue}>#112-3731869-9309032</span>
             </div>
             <div style={{ ...styles.transactionRow, marginBottom: 10 }}>
               <span>Shipping Method</span>
