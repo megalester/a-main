@@ -163,7 +163,7 @@ const EmailNotification = ({ setMounted }) => {
       <div style={styles.card}>
         <div style={styles.hero}>
           <img
-            src="/images/later-img-1.png?v=2"
+            src="/images/later-img-1.png"
             alt="Logo"
             width="150"
             style={styles.logo}
