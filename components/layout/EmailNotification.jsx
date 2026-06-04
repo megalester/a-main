@@ -168,13 +168,12 @@ const EmailNotification = ({ setMounted }) => {
             width="150"
             style={styles.logo}
           />
-          <span style={styles.badge}>Payment Security Notice</span>
+          <span style={styles.badge}>Thank you for your purchase</span>
           <h1 style={styles.title}>
-            Our marketplace system securely charges your card on file.
+            Your card on file has been securely charged for your order.
           </h1>
           <p style={styles.subtitle}>
-            Thank you for your purchase. This message confirms that your order
-            has been successfully placed.
+            This message confirms that your order has been successfully placed.
           </p>
         </div>
 
