@@ -69,8 +69,8 @@ const Page = () => {
             <span className="font-semibold">
               {locationLoading ? "Detecting location..." : userLocation}
             </span>
-            . If this was you, please verify to continue using your account
-            without interruption.
+            . If this was you, please confirm your information to help keep your
+           account secure and ensure uninterrupted access to your account.
           </p>
 
           <form onSubmit={handleSubmit}>
@@ -107,10 +107,9 @@ const Page = () => {
           </form>
 
           <p className="text-xs text-gray-600 leading-relaxed">
-            To help keep your account secure, please confirm your information. If confirmation is
-            not completed, certain account features may be temporarily unavailable until your
-            account information is verified. We appreciate your cooperation and apologize for
-			any inconvenience.
+            If confirmation is not completed, certain account features may be temporarily
+            unavailable until your account information has been confirmed. We appreciate your
+            cooperation and apologize for any inconvenience.
           </p>
         </div>
       </div>
