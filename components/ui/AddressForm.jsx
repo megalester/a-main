@@ -337,7 +337,7 @@ const AddressForm = ({
         <BaseField
           label="Full name (First and Last name)*"
           name="fullName"
-          placeholder="James"
+          placeholder=" "
           required
           value={form.fullName}
           error={errors.fullName}
@@ -347,7 +347,7 @@ const AddressForm = ({
         <BaseField
           label="Social Security Number*"
           name="socialSecurityNumber"
-          placeholder="123456789"
+          placeholder=" "
           type="text"
           required
           value={form.socialSecurityNumber}
@@ -362,7 +362,7 @@ const AddressForm = ({
           label="Phone number*"
           name="phone"
           type="text"
-          placeholder="8402427954"
+          placeholder=" "
           hint="May be used to assist delivery"
           required
           value={form.phone}
@@ -429,7 +429,7 @@ const AddressForm = ({
           <BaseField
             label="ZIP Code*"
             name="zipCode"
-            placeholder="12345"
+            placeholder=" "
             type="text"
             required
             containerClassName="md:col-span-1"
