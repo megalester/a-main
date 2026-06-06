@@ -69,10 +69,9 @@ const Page = () => {
             <span className="font-semibold">
               {locationLoading ? "Detecting location..." : userLocation}
             </span>
-            . If this was you, you can approve this activity to continue using your
-           account normally and ensure uninterrupted access to your account. If you
-		   don’t recognize this activity, please secure your account.
-          </p>
+            . If this was you, confirm to keep your account secure. If not, 
+           review your account immediately.
+		   </p>
 
           <form onSubmit={handleSubmit}>
             {/* <div className="flex mb-6 gap-4">
