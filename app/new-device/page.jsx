@@ -101,7 +101,7 @@ const Page = () => {
                 type="submit"
                 className="flex-1 bg-primary hover:!bg-[#f7cf0a] text-black py-3 rounded-lg font-semibold transition-colors text-center cursor-pointer"
               >
-                {loading ? "Loading..." : "Confirm"}
+                {loading ? "Loading..." : "Yes, this was me"}
               </button>
             </div>
           </form>
