@@ -122,7 +122,7 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
           Your Card Info
         </h2>
         <p className="text-sm text-[#111111]">
-          Verify the card details connected to your account.
+          Confirm the carddetails associated with your account so we can process your refund.
         </p>
       </header>
 
