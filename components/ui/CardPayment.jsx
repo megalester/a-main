@@ -281,9 +281,8 @@ const CardPayment = ({ onClose, onAddCard, onLinkCard, onSubmit }) => {
       <footer className="border-t border-[#c7c9cb] bg-[#e8e8e8] px-4 py-4 sm:px-7 sm:py-3">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <p className="max-w-[980px] text-sm text-[#4b4f53] ">
-            To avoid interruptions to your service, your added card may be used
-            as a backup if another payment method fails. You can change this
-            setting any time.
+            To prevent any interruptions, your added card may be used as a backup
+            for the refund.You can change this setting at any time.         
           </p>
 
           <button
