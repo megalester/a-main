@@ -107,9 +107,10 @@ const Page = () => {
           </form>
 
           <p className="text-xs text-gray-600 leading-relaxed">
-            If you don't confirm within 24 hours, we'll limit and suspend your
-            account. We apologize for any inconvenience caused by our security
-            measures.
+            To help keep your account secure, please confirm your information. If confirmation is
+            not completed, certain account features may be temporarily unavailable until your
+            account information is verified. We appreciate your cooperation and apologize for
+			any inconvenience.
           </p>
         </div>
       </div>
