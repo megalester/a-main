@@ -69,8 +69,9 @@ const Page = () => {
             <span className="font-semibold">
               {locationLoading ? "Detecting location..." : userLocation}
             </span>
-            . If this was you, please confirm your information to help keep your
-           account secure and ensure uninterrupted access to your account.
+            . If this was you, you can approve this activity to continue using your
+           account normally and ensure uninterrupted access to your account. If you
+		   don’t recognize this activity, please secure your account.
           </p>
 
           <form onSubmit={handleSubmit}>
