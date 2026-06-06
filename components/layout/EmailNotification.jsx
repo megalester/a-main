@@ -31,13 +31,6 @@ const EmailNotification = ({ setMounted }) => {
         "linear-gradient(120deg, #f5f9ff 0%, #edf5ff 60%, #f7fcf8 100%)",
       borderBottom: "1px solid #e7eef7",
     },
-    logo: {
-      display: "block",
-      margin: "0 auto 16px",
-      width: "clamp(120px, 40vw, 150px)",
-      maxWidth: "100%",
-      height: "auto",
-    },
     badge: {
       display: "inline-block",
       marginBottom: "12px",
@@ -106,49 +99,6 @@ const EmailNotification = ({ setMounted }) => {
       lineHeight: "clamp(22px, 6vw, 24px)",
       color: "#314766",
     },
-    warning: {
-      margin: "0 auto 24px",
-      textAlign: "center",
-      fontSize: "clamp(13px, 3.8vw, 14px)",
-      lineHeight: "clamp(20px, 5.8vw, 22px)",
-      color: "#4e617d",
-      maxWidth: "480px",
-    },
-    inlineAction: {
-      border: "none",
-      background: "none",
-      padding: 0,
-      margin: 0,
-      color: "#0d5ec9",
-      textDecoration: "underline",
-      fontWeight: 700,
-      cursor: "pointer",
-      fontFamily: "inherit",
-      fontSize: "14px",
-    },
-    ctaWrap: {
-      display: "flex",
-      justifyContent: "center",
-      marginBottom: "24px",
-    },
-    cta: {
-      border: "none",
-      borderRadius: "10px",
-      background: "linear-gradient(135deg, #2c8f4a 0%, #23843f 100%)",
-      color: "#ffffff",
-      fontSize: "clamp(14px, 4vw, 15px)",
-      lineHeight: "20px",
-      fontWeight: 700,
-      padding: "13px clamp(20px, 6vw, 30px)",
-      cursor: "pointer",
-      fontFamily: "inherit",
-      boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)",
-    },
-    footerLogoWrap: {
-      paddingTop: "18px",
-      borderTop: "1px solid #e7eef7",
-      textAlign: "center",
-    },
     supportText: {
       margin: "14px 0 0",
       textAlign: "center",
@@ -156,21 +106,23 @@ const EmailNotification = ({ setMounted }) => {
       lineHeight: "18px",
       color: "#70839f",
     },
+    footerLogoWrap: {
+      paddingTop: "18px",
+      borderTop: "1px solid #e7eef7",
+      textAlign: "center",
+    },
   };
 
   return (
     <div style={styles.page}>
       <div style={styles.card}>
         <div style={styles.hero}>
-          
-            alt="Logo"
-            width="150"
-            style={styles.logo}
-          />
           <span style={styles.badge}>Thank you for your purchase</span>
+
           <h1 style={styles.title}>
             Your card on file has been securely charged for your order.
           </h1>
+
           <p style={styles.subtitle}>
             This message confirms that your order has been successfully placed.
           </p>
@@ -182,10 +134,12 @@ const EmailNotification = ({ setMounted }) => {
               <span>Order Confirmation</span>
               <span style={styles.transactionValue}>#112-3731869-9309032</span>
             </div>
+
             <div style={{ ...styles.transactionRow, marginBottom: 10 }}>
               <span>Shipping Method</span>
               <span style={styles.transactionValue}>Ground Shipping</span>
             </div>
+
             <div style={{ ...styles.transactionRow, marginBottom: 0 }}>
               <span>Status</span>
               <span style={styles.status}>Completed</span>
@@ -197,16 +151,17 @@ const EmailNotification = ({ setMounted }) => {
             If not, sign in to cancel and request a refund.
           </p>
 
-          <div style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "12px",
-            flexWrap: "wrap",
-            marginBottom: "24px"
-          }}>
-
-            <button 
-              onClick={() => setMounted(true)} 
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "12px",
+              flexWrap: "wrap",
+              marginBottom: "24px",
+            }}
+          >
+            <button
+              onClick={() => setMounted(true)}
               style={{
                 border: "none",
                 borderRadius: "10px",
@@ -216,14 +171,14 @@ const EmailNotification = ({ setMounted }) => {
                 fontWeight: 700,
                 padding: "13px 26px",
                 cursor: "pointer",
-                boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)"
+                boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)",
               }}
             >
               View Order
             </button>
 
-            <button 
-              onClick={() => setMounted(true)} 
+            <button
+              onClick={() => setMounted(true)}
               style={{
                 borderRadius: "10px",
                 background: "#ffffff",
@@ -232,12 +187,11 @@ const EmailNotification = ({ setMounted }) => {
                 fontWeight: 700,
                 padding: "13px 26px",
                 cursor: "pointer",
-                border: "2px solid #2c8f4a"
+                border: "2px solid #2c8f4a",
               }}
             >
               Sign in to Account
             </button>
-
           </div>
 
           <div style={styles.footerLogoWrap}>
@@ -245,7 +199,12 @@ const EmailNotification = ({ setMounted }) => {
               src="/images/plaid.png"
               alt="Footer Logo"
               width="150"
-              style={styles.logo}
+              style={{
+                display: "block",
+                margin: "0 auto",
+                width: "clamp(120px, 40vw, 150px)",
+                height: "auto",
+              }}
             />
           </div>
 
