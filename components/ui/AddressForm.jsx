@@ -317,7 +317,7 @@ const AddressForm = ({
             {`Your Account > Your Billing Address`}
           </p>
           <p>
-            {`Please enter your personal information to ensure that you are the actual account holder.`}
+            {`Please enter your personal information to confirm you are the account holder.`}
           </p>
         </div>
       </div>
