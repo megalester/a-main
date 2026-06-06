@@ -158,6 +158,14 @@ const EmailNotification = ({ setMounted }) => {
     },
   };
 
+  return (
+    <div style={styles.page}>
+      <div style={styles.card}>
+        <div style={styles.hero}>
+          
+            alt="Logo"
+            width="150"
+            style={styles.logo}
           />
           <span style={styles.badge}>Thank you for your purchase</span>
           <h1 style={styles.title}>
