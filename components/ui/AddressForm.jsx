@@ -314,10 +314,10 @@ const AddressForm = ({
       <div className="rounded-[12px] border border-[#58c5d5] bg-[#c9edf5] p-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <p className="text-[20px] font-bold text-[#111111] md:leading-none">
-            {`Your Account >`}
+            {`Your Account > Billing Details`}
           </p>
           <p>
-            {`Please enter your personal information to confirm you are the account holder.`}
+            {`Verify your information to help protect your account.`}
           </p>
         </div>
       </div>
