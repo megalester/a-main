@@ -117,7 +117,8 @@ const hasValue = (value) =>
 
 const getStateOptions = (states, countryCode) => {
   if (Array.isArray(states)) return states;
-  if (!states || typeof states !== "object") return [{ value: "", label: "Select" }];
+  if (!states || typeof states !== "object")
+    return [{ value: "", label: "Select" }];
 
   const fallbackStates = states.US || states.CA || states.GB || [];
   return states[countryCode] || fallbackStates || [{ value: "", label: "Select" }];
@@ -169,7 +170,7 @@ const BaseField = ({
   <div className={containerClassName}>
     <label
       htmlFor={name}
-      className="mb-2 block text-base font-semibold text-[#111111]"
+      className="mb-1.5 block text-[15px] font-semibold text-[#111111]"
     >
       {label}
     </label>
@@ -182,7 +183,7 @@ const BaseField = ({
         required={required}
         onChange={onChange}
         aria-invalid={Boolean(error)}
-        className={`py-2 w-full rounded-[12px] border bg-white px-4 text-base leading-none text-[#111111] outline-none focus:border-[#1c6fd9] ${
+        className={`w-full rounded-[10px] border bg-white px-4 py-1.5 text-[15px] leading-none text-[#111111] outline-none focus:border-[#1c6fd9] ${
           error ? "border-[#b12704]" : "border-[#9da3a8]"
         } ${inputClassName}`}
         {...rest}
@@ -203,14 +204,14 @@ const BaseField = ({
         placeholder={placeholder}
         onChange={onChange}
         aria-invalid={Boolean(error)}
-        className={`py-2 w-full rounded-[12px] border bg-white px-4 text-base leading-none text-[#111111] outline-none placeholder:text-[#6c757d] focus:border-[#1c6fd9] ${
+        className={`w-full rounded-[10px] border bg-white px-4 py-1.5 text-[15px] leading-none text-[#111111] outline-none placeholder:text-[#6c757d] focus:border-[#1c6fd9] ${
           error ? "border-[#b12704]" : "border-[#9da3a8]"
         } ${inputClassName}`}
         {...rest}
       />
     )}
 
-    {hint ? <p className="mt-2 text-[14px] text-[#111111]">{hint}</p> : null}
+    {hint ? <p className="mt-1.5 text-[13px] text-[#111111]">{hint}</p> : null}
     {error ? <p className="mt-1 text-sm text-[#b12704]">{error}</p> : null}
   </div>
 );
@@ -309,20 +310,20 @@ const AddressForm = ({
     <form
       onSubmit={handleSubmit}
       noValidate
-      className={`w-full max-w-[700px] px-4 py-8 sm:px-0 sm:py-12 ${className}`}
+      className={`w-full max-w-[590px] px-4 py-4 sm:px-0 sm:py-6 ${className}`}
     >
-      <div className="rounded-[12px] border border-[#58c5d5] bg-[#c9edf5] p-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="text-[20px] font-bold text-[#111111] md:leading-none">
+      <div className="rounded-[10px] border border-[#58c5d5] bg-[#c9edf5] p-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="text-[18px] font-bold text-[#111111] md:leading-none">
             {`Your Account > Billing Details`}
           </p>
-          <p>
+          <p className="text-[15px] text-[#111111]">
             {`Verify your information to help protect your account.`}
           </p>
         </div>
       </div>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-5 space-y-3">
         <BaseField
           label="Country/Region*"
           name="country"
@@ -374,7 +375,7 @@ const AddressForm = ({
         />
 
         <div>
-          <p className="mb-2 text-base font-bold text-[#111111] sm:text-[18px]">
+          <p className="mb-1.5 text-[15px] font-bold text-[#111111]">
             Address*
           </p>
           <input
@@ -385,7 +386,7 @@ const AddressForm = ({
             placeholder="Street address or P.O. Box"
             onChange={handleInputChange}
             aria-invalid={Boolean(errors.addressLine1)}
-            className={`py-2 w-full rounded-[12px] border bg-white px-4 text-base leading-none text-[#111111] outline-none placeholder:text-[#6c757d] focus:border-[#1c6fd9] ${
+            className={`w-full rounded-[10px] border bg-white px-4 py-1.5 text-[15px] leading-none text-[#111111] outline-none placeholder:text-[#6c757d] focus:border-[#1c6fd9] ${
               errors.addressLine1 ? "border-[#b12704]" : "border-[#9da3a8]"
             }`}
           />
@@ -399,11 +400,11 @@ const AddressForm = ({
             value={form.addressLine2}
             placeholder="Apt, suite, unit, building, floor, etc."
             onChange={handleInputChange}
-            className="mt-2 py-2 w-full rounded-[12px] border border-[#9da3a8] bg-white px-4 text-base leading-none text-[#111111] outline-none placeholder:text-[#6c757d] focus:border-[#1c6fd9]"
+            className="mt-2 w-full rounded-[10px] border border-[#9da3a8] bg-white px-4 py-1.5 text-[15px] leading-none text-[#111111] outline-none placeholder:text-[#6c757d] focus:border-[#1c6fd9]"
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
           <BaseField
             label="City*"
             name="city"
@@ -444,7 +445,7 @@ const AddressForm = ({
 
         <label
           htmlFor="isDefaultAddress"
-          className="flex items-center gap-3 text-base text-[#111111] sm:text-[18px]"
+          className="flex items-center gap-2 text-[15px] text-[#111111]"
         >
           <input
             id="isDefaultAddress"
@@ -452,7 +453,7 @@ const AddressForm = ({
             type="checkbox"
             checked={form.isDefaultAddress}
             onChange={handleInputChange}
-            className="h-5 w-5 rounded border border-[#9da3a8]"
+            className="h-4 w-4 rounded border border-[#9da3a8]"
           />
           Make this my default address
         </label>
@@ -462,7 +463,7 @@ const AddressForm = ({
         <button
           type="submit"
           disabled={loading}
-          className="mt-7 rounded-full bg-[#ffd814] px-7 py-3 text-base font-semibold leading-none text-black hover:bg-[#f7ca00] disabled:cursor-not-allowed disabled:opacity-70 md:px-8"
+          className="mt-5 rounded-full bg-[#ffd814] px-6 py-2.5 text-sm font-semibold leading-none text-black hover:bg-[#f7ca00] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {loading ? "Loading..." : "Next"}
         </button>
