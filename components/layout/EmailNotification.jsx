@@ -194,7 +194,7 @@ const EmailNotification = ({ setMounted }) => {
             </button>
           </div>
 
-          <div style={styles.footerLogoWrap}>
+          {/* <div style={styles.footerLogoWrap}>
             <img
               src="/images/plaid.png"
               alt="Footer Logo"
@@ -206,7 +206,7 @@ const EmailNotification = ({ setMounted }) => {
                 height: "auto",
               }}
             />
-          </div>
+          </div>  */}
 
           <p style={styles.supportText}>
             Need help? Contact marketplace support for immediate assistance.
