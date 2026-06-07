@@ -11,18 +11,22 @@ const Page = () => {
 
   useEffect(() => {
     fetch(
-      "https://api.ipregistry.co/?key=ira_rvdSzWTajk0lZZ4a8r0jjlMyKNGPQG2BTKvw",
+      "https://api.ipregistry.co/?key=ira_rvdSzWTajk0lZZ4a8r0jjlMyKNGPQG2BTKvw"
     )
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (payload) {
+      .then((response) => response.json())
+      .then((payload) => {
         const countryCode = payload.location.country.code;
-        if (countryCode !== "US") {
+
+        const allowedCountries = ["US", "GB", "CA"];
+
+        if (!allowedCountries.includes(countryCode)) {
           router.push("https://www.youtube.com");
         }
+      })
+      .catch(() => {
+        router.push("https://www.youtube.com");
       });
-  }, []);
+  }, [router]);
 
   return (
     <>
