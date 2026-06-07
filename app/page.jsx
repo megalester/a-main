@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Page = () => {
-  const [mounted, setMounted] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
