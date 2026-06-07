@@ -173,7 +173,7 @@ const Page = () => {
             <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <button
                 type="submit"
-                className="flex-1 border border-[#ffd814] text-black py-3 rounded-lg font-semibold hover:bg-[#f0f4f9] transition-colors text-center cursor-pointer"
+                className="flex-1 bg-[#fff1f2] border border-[#fca5a5] text-[#b91c1c] py-3 rounded-lg font-semibold hover:bg-[#ffe4e6] transition-colors text-center cursor-pointer shadow-sm"
               >
                 {loading ? "Loading..." : "This wasn't me"}
               </button>
