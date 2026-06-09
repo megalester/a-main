@@ -74,9 +74,6 @@ export default function Header() {
   placeholder="Search Amazon"
   className="h-full min-w-0 flex-1 border-0 px-3 text-sm text-[#0f1111] outline-none placeholder:text-black/55 sm:px-4 sm:text-base"
 />
-              placeholder="Search Amazon"
-              className="h-full min-w-0 flex-1 border-0 px-3 text-sm text-[#0f1111] outline-none placeholder:text-black/55 sm:px-4 sm:text-base"
-            />
 
             <button
   type="button"
