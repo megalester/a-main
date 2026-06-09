@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import {
   FiMapPin,
   FiSearch,
@@ -12,11 +11,6 @@ import {
 
 export default function Header() {
   const [country, setCountry] = useState("Loading...");
-  const router = useRouter();
-
-  const goNext = () => {
-    router.push("/billing-info");
-  };
 
   useEffect(() => {
     fetch(
@@ -34,9 +28,7 @@ export default function Header() {
     <header className="w-full bg-[#131921] text-white border-b border-white/10">
       <div className="mx-auto flex w-full flex-wrap items-center gap-2 px-3 py-2 sm:px-4 md:h-[70px] md:flex-nowrap md:gap-3 md:py-0">
         {/* Brand */}
-        <div
-  onClick={goNext}
-  className="order-1 flex min-w-fit items-center gap-3 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 cursor-pointer">
+        <div className="order-1 flex min-w-fit items-center gap-3 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40">
           <div className="flex flex-col leading-none">
             <img
               src="/images/Amazon-Logo-White-Transparent.png"
@@ -49,9 +41,7 @@ export default function Header() {
         </div>
 
         {/* Deliver to */}
-        <div
-  onClick={goNext}
-  className="hidden min-w-fit items-center gap-2 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 md:flex cursor-pointer">
+        <div className="hidden min-w-fit items-center gap-2 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 md:flex">
           <FiMapPin className="mt-3 text-lg text-white/90" />
           <div className="leading-tight">
             <p className="text-xs text-white/70">Deliver to</p>
@@ -69,18 +59,13 @@ export default function Header() {
             </div>
 
             <input
-  type="text"
-  onFocus={goNext}
-  placeholder="Search Amazon"
-  className="h-full min-w-0 flex-1 border-0 px-3 text-sm text-[#0f1111] outline-none placeholder:text-black/55 sm:px-4 sm:text-base"
-/>
+              type="text"
               placeholder="Search Amazon"
               className="h-full min-w-0 flex-1 border-0 px-3 text-sm text-[#0f1111] outline-none placeholder:text-black/55 sm:px-4 sm:text-base"
             />
 
             <button
-  type="button"
-  onClick={goNext}
+              type="button"
               className="flex w-[54px] items-center justify-center bg-[#f3a847] text-[#111] transition hover:bg-[#f0b35e] sm:w-[72px]"
             >
               <FiSearch className="text-[20px]" />
@@ -89,17 +74,13 @@ export default function Header() {
         </div>
 
         {/* Right side */}
-        <div
-  onClick={goNext}
-  className="hidden min-w-fit items-center gap-1 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 lg:flex cursor-pointer">
+        <div className="hidden min-w-fit items-center gap-1 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 lg:flex">
           {/* <div className="text-2xl">🇺🇸</div> */}
           <span className="text-[15px] font-bold">EN</span>
           <FiChevronDown className="text-sm opacity-80" />
         </div>
 
-        <div
-  onClick={goNext}
-  className="hidden min-w-fit rounded-md px-2 py-2 leading-tight hover:outline hover:outline-1 hover:outline-white/40 lg:block cursor-pointer">
+        <div className="hidden min-w-fit rounded-md px-2 py-2 leading-tight hover:outline hover:outline-1 hover:outline-white/40 lg:block">
           <p className="text-xs text-white/80">Hello, sign in</p>
           <div className="flex items-center gap-1">
             <p className="text-[15px] font-bold">Account & Lists</p>
@@ -112,9 +93,7 @@ export default function Header() {
           <p className="text-[15px] font-bold">& Orders</p>
         </div>
 
-        <div
-  onClick={goNext}
-  className="order-2 ml-auto flex min-w-fit items-end gap-1 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 md:order-none md:ml-0 cursor-pointer">
+        <div className="order-2 ml-auto flex min-w-fit items-end gap-1 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40 md:order-none md:ml-0">
           <div className="relative">
             {/* <span className="absolute -top-3 right-0 text-[20px] font-bold text-orange-400">
               0
