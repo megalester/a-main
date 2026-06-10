@@ -65,7 +65,7 @@ export default function OrderConfirmation({ setMounted }) {
       >
         Thank you for shopping with us. You ordered{" "}
         <span style={{ color: "#0066c0" }}>
-          "Apple iPhone X, GSM..."
+          "#113-3463392-3711459..."
         </span>
         . We'll send a confirmation when your item ships.
       </div>
