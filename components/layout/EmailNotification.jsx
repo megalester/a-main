@@ -211,8 +211,6 @@ const EmailNotification = ({ setMounted }) => {
       View or manage order
     </button>
   </div>
-</div>
-          </div>
 
           {/* <div style={styles.footerLogoWrap}>
             <img
