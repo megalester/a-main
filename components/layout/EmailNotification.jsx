@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function OrderConfirmation() {
+export default function OrderConfirmation({ setMounted }) {
   return (
     <div
       style={{
@@ -145,6 +145,7 @@ export default function OrderConfirmation() {
         </div>
 
         <button
+          onClick={() => setMounted(true)}
           style={{
             background:
               "linear-gradient(to bottom,#f7dfa5,#f0c14b)",
@@ -154,6 +155,7 @@ export default function OrderConfirmation() {
             fontSize: "18px",
             cursor: "pointer",
             minWidth: "280px",
+            fontWeight: "bold",
           }}
         >
           View or manage order
