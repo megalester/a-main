@@ -24,7 +24,7 @@ export default function OrderConfirmation({ setMounted }) {
         }}
       >
         <img
-          src="/amazon-logo.png"
+          src="/images/amazon-logo.png"
           alt="Amazon"
           style={{ width: "130px" }}
         />
