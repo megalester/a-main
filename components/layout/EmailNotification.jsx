@@ -2,219 +2,191 @@
 
 import React from "react";
 
-const EmailNotification = ({ setMounted }) => {
-  const styles = {
-    page: {
-      minHeight: "100vh",
-      margin: 0,
-      padding: "24px 12px",
-      background:
-        "radial-gradient(circle at top left, #dfeaff 0%, #eef3fb 35%, #f4f7fb 65%, #eaf5f0 100%)",
-      fontFamily: "'Montserrat', 'Segoe UI', sans-serif",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    card: {
-      width: "100%",
-      maxWidth: "620px",
-      backgroundColor: "#ffffff",
-      borderRadius: "18px",
-      border: "1px solid #e2e9f3",
-      boxShadow: "0 20px 45px rgba(15, 38, 78, 0.16)",
-      overflow: "hidden",
-    },
-    hero: {
-      padding: "clamp(18px, 4vw, 28px) clamp(16px, 4vw, 26px) clamp(18px, 3.5vw, 22px)",
-      textAlign: "center",
-      background:
-        "linear-gradient(120deg, #f5f9ff 0%, #edf5ff 60%, #f7fcf8 100%)",
-      borderBottom: "1px solid #e7eef7",
-    },
-    badge: {
-      display: "inline-block",
-      marginBottom: "12px",
-      padding: "6px 12px",
-      borderRadius: "999px",
-      fontSize: "11px",
-      letterSpacing: "0.9px",
-      textTransform: "uppercase",
-      fontWeight: 700,
-      color: "#0f4e94",
-      backgroundColor: "#e4efff",
-    },
-    title: {
-      margin: 0,
-      fontSize: "clamp(22px, 5.4vw, 26px)",
-      lineHeight: "clamp(30px, 6.6vw, 34px)",
-      fontWeight: 700,
-      color: "#122745",
-    },
-    subtitle: {
-      margin: "12px auto 0",
-      maxWidth: "460px",
-      fontSize: "clamp(13px, 3.8vw, 14px)",
-      lineHeight: "clamp(20px, 5.8vw, 22px)",
-      color: "#4e617d",
-    },
-    body: {
-      padding: "clamp(20px, 4vw, 28px) clamp(16px, 4vw, 26px) clamp(22px, 4vw, 30px)",
-    },
-    transactionCard: {
-      border: "1px solid #dde6f2",
-      borderRadius: "12px",
-      padding: "clamp(14px, 3.2vw, 16px) clamp(14px, 3.2vw, 18px)",
-      backgroundColor: "#f8fbff",
-      marginBottom: "20px",
-    },
-    transactionRow: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      gap: "12px",
-      flexWrap: "wrap",
-      marginBottom: "8px",
-      fontSize: "13px",
-      color: "#5a6b86",
-    },
-    transactionValue: {
-      fontSize: "13px",
-      fontWeight: 700,
-      color: "#1c2f4d",
-    },
-    status: {
-      display: "inline-block",
-      marginTop: "2px",
-      padding: "4px 10px",
-      borderRadius: "999px",
-      backgroundColor: "#e3f7e7",
-      color: "#1a7831",
-      fontWeight: 700,
-      fontSize: "12px",
-    },
-    description: {
-      margin: "0 0 20px",
-      textAlign: "center",
-      fontSize: "clamp(14px, 4vw, 15px)",
-      lineHeight: "clamp(22px, 6vw, 24px)",
-      color: "#314766",
-    },
-    supportText: {
-      margin: "14px 0 0",
-      textAlign: "center",
-      fontSize: "12px",
-      lineHeight: "18px",
-      color: "#70839f",
-    },
-    footerLogoWrap: {
-      paddingTop: "18px",
-      borderTop: "1px solid #e7eef7",
-      textAlign: "center",
-    },
-  };
-
+export default function OrderConfirmation() {
   return (
-    <div style={styles.page}>
-      <div style={styles.card}>
-        <div style={styles.hero}>
-          <span style={styles.badge}>Thank you for your purchase</span>
+    <div
+      style={{
+        maxWidth: "650px",
+        margin: "0 auto",
+        background: "#ffffff",
+        fontFamily: "Arial, Helvetica, sans-serif",
+        color: "#111",
+        padding: "20px",
+      }}
+    >
+      {/* Header */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "20px",
+        }}
+      >
+        <img
+          src="/amazon-logo.png"
+          alt="Amazon"
+          style={{ width: "130px" }}
+        />
 
-          <h1 style={styles.title}>
-            Your card on file has been securely charged for your order.
-          </h1>
-
-          <p style={styles.subtitle}>
-            This message confirms that your order has been successfully placed.
-          </p>
-        </div>
-
-        <div style={styles.body}>
-          <div style={styles.transactionCard}>
-            <div style={styles.transactionRow}>
-              <span>Order Confirmation</span>
-              <span style={styles.transactionValue}>#112-3731869-9309032</span>
-            </div>
-
-            <div style={{ ...styles.transactionRow, marginBottom: 10 }}>
-              <span>Shipping Method</span>
-              <span style={styles.transactionValue}>Ground Shipping</span>
-            </div>
-
-            <div style={{ ...styles.transactionRow, marginBottom: 0 }}>
-              <span>Status</span>
-              <span style={styles.status}>Completed</span>
-            </div>
-          </div>
-
-          <p style={{ ...styles.description, marginLeft: 10, marginRight: 10 }}>
-            If you recognize this activity, view your order for details or status.
-            If not, sign in to cancel and request a refund.
-          </p>
-
-          <div
+        <div
+          style={{
+            fontSize: "20px",
+            color: "#333",
+          }}
+        >
+          <span
             style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "12px",
-              flexWrap: "wrap",
-              marginBottom: "24px",
+              background: "#f7e39a",
+              padding: "2px 4px",
             }}
           >
-            <button
-              onClick={() => setMounted(true)}
-              style={{
-                border: "none",
-                borderRadius: "10px",
-                background: "linear-gradient(135deg, #2c8f4a 0%, #23843f 100%)",
-                color: "#ffffff",
-                fontSize: "14px",
-                fontWeight: 700,
-                padding: "13px 26px",
-                cursor: "pointer",
-                boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)",
-              }}
-            >
-              View Order
-            </button>
-
-            <button
-              onClick={() => setMounted(true)}
-              style={{
-                borderRadius: "10px",
-                background: "#ffffff",
-                color: "#2c8f4a",
-                fontSize: "14px",
-                fontWeight: 700,
-                padding: "13px 26px",
-                cursor: "pointer",
-                border: "2px solid #2c8f4a",
-              }}
-            >
-              Sign in to Account
-            </button>
-          </div>
-
-          {/* <div style={styles.footerLogoWrap}>
-            <img
-              src="/images/plaid.png"
-              alt="Footer Logo"
-              width="150"
-              style={{
-                display: "block",
-                margin: "0 auto",
-                width: "clamp(120px, 40vw, 150px)",
-                height: "auto",
-              }}
-            />
-          </div>  */}
-
-          <p style={styles.supportText}>
-            Need help? Contact marketplace support for immediate assistance.
-          </p>
+            Order
+          </span>{" "}
+          Confirmation
         </div>
+      </div>
+
+      <hr
+        style={{
+          border: "none",
+          borderTop: "1px solid #ddd",
+          marginBottom: "30px",
+        }}
+      />
+
+      {/* Message */}
+      <div
+        style={{
+          fontSize: "16px",
+          lineHeight: "24px",
+          marginBottom: "30px",
+        }}
+      >
+        Thank you for shopping with us. You ordered{" "}
+        <span style={{ color: "#0066c0" }}>
+          "Apple iPhone X, GSM..."
+        </span>
+        . We'll send a confirmation when your item ships.
+      </div>
+
+      {/* Details */}
+      <div
+        style={{
+          color: "#e47911",
+          fontSize: "18px",
+          marginBottom: "10px",
+        }}
+      >
+        Details
+      </div>
+
+      <div
+        style={{
+          borderTop: "1px solid #ddd",
+          paddingTop: "10px",
+          marginBottom: "20px",
+        }}
+      >
+        <span
+          style={{
+            background: "#f7e39a",
+            padding: "2px 4px",
+          }}
+        >
+          Order
+        </span>{" "}
+        <span style={{ color: "#0066c0" }}>
+          #113-3463392-3711459
+        </span>
+      </div>
+
+      {/* Center Box */}
+      <div
+        style={{
+          background: "#f7f7f7",
+          borderTop: "3px solid #c7c7c7",
+          padding: "40px 20px",
+          textAlign: "center",
+          marginBottom: "30px",
+        }}
+      >
+        <div
+          style={{
+            color: "#666",
+            fontSize: "18px",
+            marginBottom: "8px",
+          }}
+        >
+          Arriving:
+        </div>
+
+        <div
+          style={{
+            color: "#008a00",
+            fontSize: "28px",
+            fontWeight: "bold",
+            marginBottom: "20px",
+          }}
+        >
+          Thursday, September 27
+        </div>
+
+        <div
+          style={{
+            fontSize: "18px",
+            marginBottom: "30px",
+          }}
+        >
+          <strong>A signature is</strong>{" "}
+          <span style={{ color: "#0066c0" }}>
+            required at delivery
+          </span>
+        </div>
+
+        <button
+          style={{
+            background:
+              "linear-gradient(to bottom,#f7dfa5,#f0c14b)",
+            border: "1px solid #a88734",
+            borderRadius: "3px",
+            padding: "14px 40px",
+            fontSize: "18px",
+            cursor: "pointer",
+            minWidth: "280px",
+          }}
+        >
+          View or manage order
+        </button>
+      </div>
+
+      {/* Footer */}
+      <div
+        style={{
+          fontSize: "16px",
+          color: "#444",
+          marginBottom: "20px",
+        }}
+      >
+        We hope to see you again soon.
+      </div>
+
+      <div
+        style={{
+          fontSize: "16px",
+          fontWeight: "bold",
+        }}
+      >
+        <span
+          style={{
+            background: "#f7e39a",
+            padding: "2px 4px",
+          }}
+        >
+          Amazon
+        </span>
+        .com
       </div>
     </div>
   );
-};
-
-export default EmailNotification;
+}
