@@ -129,7 +129,7 @@ export default function OrderConfirmation({ setMounted }) {
             marginBottom: "20px",
           }}
         >
-          Thursday, September 27
+          Delivered Tomorrow
         </div>
 
         <div
