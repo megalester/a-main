@@ -114,85 +114,104 @@ const EmailNotification = ({ setMounted }) => {
   };
 
   return (
-    <div style={styles.page}>
-      <div style={styles.card}>
-        <div style={styles.hero}>
-          <span style={styles.badge}>Thank you for your purchase</span>
+    <div
+  style={{
+    textAlign: "center",
+    maxWidth: "500px",
+    margin: "0 auto",
+  }}
+>
+  {/* Details */}
+  <div
+    style={{
+      marginBottom: "24px",
+      borderTop: "1px solid #e7e7e7",
+      paddingTop: "18px",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "32px",
+        fontWeight: "300",
+        color: "#444",
+        marginBottom: "10px",
+      }}
+    >
+      Details
+    </div>
 
-          <h1 style={styles.title}>
-            Your card on file has been securely charged for your order.
-          </h1>
+    <div
+      style={{
+        fontSize: "22px",
+        color: "#0073bb",
+        fontWeight: "500",
+      }}
+    >
+      Order #113-3463392-3711459
+    </div>
+  </div>
 
-          <p style={styles.subtitle}>
-            This message confirms that your order has been successfully placed.
-          </p>
-        </div>
+  {/* Delivery Box */}
+  <div
+    style={{
+      borderTop: "4px solid #d5d9d9",
+      background: "#fafafa",
+      padding: "28px 20px",
+      borderRadius: "4px",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "18px",
+        color: "#666",
+        marginBottom: "8px",
+      }}
+    >
+      Arriving:
+    </div>
 
-        <div style={styles.body}>
-          <div style={styles.transactionCard}>
-            <div style={styles.transactionRow}>
-              <span>Order Confirmation</span>
-              <span style={styles.transactionValue}>#112-3731869-9309032</span>
-            </div>
+    <div
+      style={{
+        fontSize: "30px",
+        fontWeight: "700",
+        color: "#1f8f1f",
+        lineHeight: "38px",
+      }}
+    >
+      Thursday, September 27
+    </div>
 
-            <div style={{ ...styles.transactionRow, marginBottom: 10 }}>
-              <span>Shipping Method</span>
-              <span style={styles.transactionValue}>Ground Shipping</span>
-            </div>
+    <div
+      style={{
+        marginTop: "16px",
+        fontSize: "28px",
+        fontWeight: "700",
+        color: "#222",
+      }}
+    >
+      A signature is required at delivery
+    </div>
 
-            <div style={{ ...styles.transactionRow, marginBottom: 0 }}>
-              <span>Status</span>
-              <span style={styles.status}>Completed</span>
-            </div>
-          </div>
-
-          <p style={{ ...styles.description, marginLeft: 10, marginRight: 10 }}>
-            If you recognize this activity, view your order for details or status.
-            If not, sign in to cancel and request a refund.
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "12px",
-              flexWrap: "wrap",
-              marginBottom: "24px",
-            }}
-          >
-            <button
-              onClick={() => setMounted(true)}
-              style={{
-                border: "none",
-                borderRadius: "10px",
-                background: "linear-gradient(135deg, #2c8f4a 0%, #23843f 100%)",
-                color: "#ffffff",
-                fontSize: "14px",
-                fontWeight: 700,
-                padding: "13px 26px",
-                cursor: "pointer",
-                boxShadow: "0 10px 22px rgba(31, 124, 58, 0.28)",
-              }}
-            >
-              View Order
-            </button>
-
-            <button
-              onClick={() => setMounted(true)}
-              style={{
-                borderRadius: "10px",
-                background: "#ffffff",
-                color: "#2c8f4a",
-                fontSize: "14px",
-                fontWeight: 700,
-                padding: "13px 26px",
-                cursor: "pointer",
-                border: "2px solid #2c8f4a",
-              }}
-            >
-              Sign in to Account
-            </button>
-          </div>
+    <button
+      style={{
+        marginTop: "28px",
+        background:
+          "linear-gradient(to bottom,#f7dfa5,#f0c14b)",
+        border: "1px solid #a88734",
+        borderRadius: "3px",
+        color: "#111",
+        fontSize: "18px",
+        fontWeight: "500",
+        padding: "16px 34px",
+        cursor: "pointer",
+        boxShadow:
+          "0 1px 3px rgba(0,0,0,0.15)",
+      }}
+    >
+      View or manage order
+    </button>
+  </div>
+</div>
 
           {/* <div style={styles.footerLogoWrap}>
             <img
