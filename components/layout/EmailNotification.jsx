@@ -129,7 +129,7 @@ export default function OrderConfirmation({ setMounted }) {
             marginBottom: "20px",
           }}
         >
-          Next Day Delivery
+          Next-Day Delivery
         </div>
 
         <div
