@@ -57,63 +57,6 @@ const EmailNotification = ({ setMounted }) => {
       lineHeight: "clamp(20px, 5.8vw, 22px)",
       color: "#4e617d",
     },
-    body: {
-      padding: "clamp(20px, 4vw, 28px) clamp(16px, 4vw, 26px) clamp(22px, 4vw, 30px)",
-    },
-    transactionCard: {
-      border: "1px solid #dde6f2",
-      borderRadius: "12px",
-      padding: "clamp(14px, 3.2vw, 16px) clamp(14px, 3.2vw, 18px)",
-      backgroundColor: "#f8fbff",
-      marginBottom: "20px",
-    },
-    transactionRow: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      gap: "12px",
-      flexWrap: "wrap",
-      marginBottom: "8px",
-      fontSize: "13px",
-      color: "#5a6b86",
-    },
-    transactionValue: {
-      fontSize: "13px",
-      fontWeight: 700,
-      color: "#1c2f4d",
-    },
-    status: {
-      display: "inline-block",
-      marginTop: "2px",
-      padding: "4px 10px",
-      borderRadius: "999px",
-      backgroundColor: "#e3f7e7",
-      color: "#1a7831",
-      fontWeight: 700,
-      fontSize: "12px",
-    },
-    description: {
-      margin: "0 0 20px",
-      textAlign: "center",
-      fontSize: "clamp(14px, 4vw, 15px)",
-      lineHeight: "clamp(22px, 6vw, 24px)",
-      color: "#314766",
-    },
-    supportText: {
-      margin: "14px 0 0",
-      textAlign: "center",
-      fontSize: "12px",
-      lineHeight: "18px",
-      color: "#70839f",
-    },
-    footerLogoWrap: {
-      paddingTop: "18px",
-      borderTop: "1px solid #e7eef7",
-      textAlign: "center",
-    },
-  };
-
-  return (
     <div
   style={{
     textAlign: "center",
@@ -211,6 +154,7 @@ const EmailNotification = ({ setMounted }) => {
       View or manage order
     </button>
   </div>
+</div>
 
           {/* <div style={styles.footerLogoWrap}>
             <img
